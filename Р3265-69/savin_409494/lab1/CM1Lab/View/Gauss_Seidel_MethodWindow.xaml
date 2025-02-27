@@ -1,0 +1,80 @@
+﻿<Window x:Class="CM1Lab.View.Gauss_Seidel_MethodWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CM1Lab.View"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="Gauss_Seidel_MethodWindow" Height="1080" Width="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <oxy:PlotView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Model="{Binding PlotModel}" />
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <!--<Button Content="S" Width="35" Height="35" IsDefault="True" Click="ChooseWayClick" />-->
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+            <TextBlock FontSize="10">Точность:</TextBlock>
+            <TextBox Text="{Binding Accuracy}" x:Name="Accuracy" Height="17px" Width="100px" Margin="5" FontSize="10" BorderBrush="Black"/>
+
+            <TextBlock FontSize="10">Размерность:</TextBlock>
+            <TextBox Text="{Binding Size}" x:Name="Size" Height="17px" Width="100px" Margin="5" FontSize="10" BorderBrush="Black"/>
+
+            <TextBlock FontSize="10">Максимальное количестов итераций:</TextBlock>
+            <TextBox Text="{Binding MaxCountOfIter}" Height="17px" Width="100px" Margin="5" FontSize="10" BorderBrush="Black"/>
+
+            <Button Content="Подтвердить" Width="100" Height="35" Margin="10px" IsDefault="True" Click="ConfirmClick" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
+            <TextBlock FontSize="10" HorizontalAlignment="Left">Норма матрицы:</TextBlock>
+            <TextBlock FontSize="10" HorizontalAlignment="Left" Text="{Binding Norma}"></TextBlock>
+
+            <TextBlock FontSize="10" HorizontalAlignment="Left">Векторы:</TextBlock>
+            <TextBlock FontSize="10" HorizontalAlignment="Left" Text="{Binding Vector}"></TextBlock>
+
+            <TextBlock FontSize="10" HorizontalAlignment="Left">Количество итераций:</TextBlock>
+            <TextBlock FontSize="10" HorizontalAlignment="Left" Text="{Binding CountOfIter}"></TextBlock>
+
+            <TextBlock FontSize="10" HorizontalAlignment="Left">Вектор погрешностей:</TextBlock>
+            <TextBlock FontSize="10" HorizontalAlignment="Left" Text="{Binding VectorPogr}"></TextBlock>
+
+        </StackPanel>
+
+        <!--<StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left">
+            <TextBlock FontSize="10" HorizontalAlignment="Left">Коэффициенты:</TextBlock>
+            <TextBox x:Name="Coef" Height="600px" Width="600px" Margin="10px" BorderBrush="Black"/>
+        </StackPanel>-->
+
+
+        <!-- Панель для ввода данных -->
+        <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1">
+            <!-- Панель для коэффициентов -->
+            <TextBlock FontSize="10">Коэффициенты:</TextBlock>
+            
+            <Grid x:Name="CoefficientGrid">
+                <!-- Мы будем динамически заполнять Grid, исходя из Size -->
+            </Grid>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center">
+            <Button Content="Выбрать файл" Width="100" Height="35" Margin="10px" IsDefault="True" Click="ChooseWayClick" />
+            <Button Content="Посчитать" Width="100" Height="35" Margin="10px" IsDefault="True" Click="CountResults" />
+        </StackPanel>
+    </Grid>
+</Window>

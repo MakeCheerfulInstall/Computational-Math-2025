@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZB8DRPRHxIg=",
+  "success": true,
+  "projectFilePath": "C:\\University\\Computational Mathematics\\CM1Lab\\CM1Lab\\CM1Lab.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\oxyplot.core\\2.2.0\\oxyplot.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\oxyplot.wpf\\2.2.0\\oxyplot.wpf.2.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\oxyplot.wpf.shared\\2.2.0\\oxyplot.wpf.shared.2.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
