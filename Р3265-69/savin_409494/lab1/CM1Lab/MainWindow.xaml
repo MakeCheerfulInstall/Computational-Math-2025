@@ -1,0 +1,45 @@
+﻿<Window x:Class="CM1Lab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CM1Lab"
+        mc:Ignorable="d"
+        Title="График функции" Height="1080" Width="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
+
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>-->
+
+
+
+        <Rectangle Fill="#2d2d44"/>
+
+        <StackPanel Grid.Row="0" Margin="30">
+            <TextBlock FontSize="50px" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold">Вычислительная Математика</TextBlock>
+            <!--<Canvas>
+                <Ellipse
+                    Width="50"
+                    Height="50"
+                    Fill="White"
+                    StrokeThickness="4"
+                    Canvas.Left="1150"
+                    Canvas.Top="-50" />
+            </Canvas>-->
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="20">
+            <Button Height="60px" Width="400px" Content="Решить СЛАУ Методом Гаусса-Зейделя" FontSize="20px" Margin="10" Click="gauss_seidelWindow_Click"></Button>
+            <!--<Button Height="40px" Width="250px" Content="Планирование Маршрута" FontSize="20px" 
+                    Margin="10" Click="btnPlan_Click"></Button>
+            <Button Height="40px" Width="250px" Content="История" FontSize="20px" Margin="10" Click="btnHistory_Click"></Button>-->
+        </StackPanel>
+    </Grid>
+</Window>
